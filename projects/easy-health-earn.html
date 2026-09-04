@@ -600,19 +600,10 @@ body.work-viewing #pointer{visibility:hidden!important}
 @media(max-width:760px){#work-explorer .work-heading{align-items:flex-start;flex-direction:column;gap:15px}#work-explorer .work-grid{grid-template-columns:1fr}#work-explorer .work-cover{height:240px}#work-explorer{padding:32px 0 45px}}
 @media(prefers-reduced-motion:reduce){#work-explorer *,#viewPointer.work-on{transition:none!important;animation:none!important}}
 
-#work-explorer{box-sizing:border-box}#work-explorer .work-card{display:block;height:auto;text-align:left}#viewPointer.work-on{position:fixed!important;display:block!important;z-index:10002!important;pointer-events:none!important}#work-explorer .work-copy{display:block}#work-explorer .work-card:before,#work-explorer .work-card:after{display:none}</style><link rel="stylesheet" href="../assets/fonts/fonts-local.css"><script id="portfolio-progressive-ready">
-document.addEventListener('DOMContentLoaded',()=>{
-  const critical=[...document.images].filter(img=>img.loading!=='lazy').slice(0,8);
-  const settled=critical.map(img=>img.complete?Promise.resolve():new Promise(resolve=>{
-    img.addEventListener('load',resolve,{once:true});img.addEventListener('error',resolve,{once:true});
-  }));
-  Promise.race([Promise.all(settled),new Promise(resolve=>setTimeout(resolve,1200))])
-    .then(()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:'portfolio:page-ready'},'*'))));
-});
-</script></head>
+#work-explorer{box-sizing:border-box}#work-explorer .work-card{display:block;height:auto;text-align:left}#viewPointer.work-on{position:fixed!important;display:block!important;z-index:10002!important;pointer-events:none!important}#work-explorer .work-copy{display:block}#work-explorer .work-card:before,#work-explorer .work-card:after{display:none}</style><link rel="stylesheet" href="../assets/fonts/fonts-local.css"><script>document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:'portfolio:page-ready'},'*'))));</script></head>
 <body>
-<img class="pointer" id="pointer" src="../assets/images/image-001-55355e7a.png" alt="" decoding="async">
-<div class="view-pointer" id="viewPointer"><img src="../assets/images/image-002-abcef0f8.png" alt="VIEW" decoding="async"></div>
+<img class="pointer" id="pointer" src="../assets/images/image-001-55355e7a.png" alt="">
+<div class="view-pointer" id="viewPointer"><img src="../assets/images/image-002-abcef0f8.png" alt="VIEW"></div>
 
 
 
@@ -625,10 +616,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 </div>
 
 <div class="view" id="view">
-<img src="../assets/images/image-002-abcef0f8.png" alt="VIEW" decoding="async">
+<img src="../assets/images/image-002-abcef0f8.png" alt="VIEW">
 </div>
 <a class="back" href="../index.html#capabilities" aria-label="返回首页作品集">
-<img src="../assets/images/image-003-03ee12e3.png" alt="BACK" decoding="async">
+<img src="../assets/images/image-003-03ee12e3.png" alt="BACK">
 </a>
 <main>
 <header class="hero">
@@ -651,16 +642,16 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div class="flow-streak">
 </div>
 <div class="hero-phone">
-<img src="../assets/images/image-069-99ff4ca0.png" alt="Easy Health & Earn 产品首页" decoding="async">
+<img src="../assets/images/image-069-99ff4ca0.png" alt="Easy Health & Earn 产品首页">
 </div>
 <div class="cover-composite" aria-label="Easy Health & Earn 行动奖励闭环">
-<img class="cover-plate" src="../assets/images/image-070-b6f1cd40.png" alt="Easy Health & Earn 产品界面" decoding="async">
-<img class="cover-layer cover-blue" src="../assets/images/image-071-bdd1dfc5.png" alt="碎片化运动" decoding="async">
-<img class="cover-layer cover-stairs" src="../assets/images/image-072-2e39450a.png" alt="楼梯运动" decoding="async">
-<img class="cover-layer cover-yellow" src="../assets/images/image-073-887e875e.png" alt="站立活动" decoding="async">
-<img class="cover-layer cover-water" src="../assets/images/image-074-00f5bf68.png" alt="饮水任务" decoding="async">
-<img class="cover-layer cover-card" src="../assets/images/image-075-1fd92aa2.png" alt="饮水获得 100 健康值" loading="lazy" decoding="async">
-<img class="cover-layer cover-box" src="../assets/images/image-076-4c6cb581.png" alt="神秘奖励" loading="lazy" decoding="async">
+<img class="cover-plate" src="../assets/images/image-070-b6f1cd40.png" alt="Easy Health & Earn 产品界面">
+<img class="cover-layer cover-blue" src="../assets/images/image-071-bdd1dfc5.png" alt="碎片化运动">
+<img class="cover-layer cover-stairs" src="../assets/images/image-072-2e39450a.png" alt="楼梯运动">
+<img class="cover-layer cover-yellow" src="../assets/images/image-073-887e875e.png" alt="站立活动">
+<img class="cover-layer cover-water" src="../assets/images/image-074-00f5bf68.png" alt="饮水任务">
+<img class="cover-layer cover-card" src="../assets/images/image-075-1fd92aa2.png" alt="饮水获得 100 健康值">
+<img class="cover-layer cover-box" src="../assets/images/image-076-4c6cb581.png" alt="神秘奖励">
 <div class="cover-glow-dot dot-a"></div><div class="cover-glow-dot dot-b"></div>
 </div><div class="float-card fc1">MICRO ACTION<b>10 MIN</b>
 </div>
@@ -1102,19 +1093,19 @@ document.addEventListener('DOMContentLoaded',()=>{
 </div>
 <div class="cash-gallery" aria-label="分级奖励实验现场">
 <figure class="briefing">
-<img src="../assets/images/image-077-cd1673fe.webp" alt="向参与者说明分级奖励规则" loading="lazy" decoding="async">
+<img src="../assets/images/image-077-cd1673fe.webp" alt="向参与者说明分级奖励规则">
 <figcaption>01 / 规则告知</figcaption>
 </figure>
 <figure>
-<img src="../assets/images/image-078-4bbeca56.webp" alt="参与者阅读任务规则" loading="lazy" decoding="async">
+<img src="../assets/images/image-078-4bbeca56.webp" alt="参与者阅读任务规则">
 <figcaption>02 / 开始任务</figcaption>
 </figure>
 <figure>
-<img src="../assets/images/image-079-64a18d04.webp" alt="参与者完成任务获得奖励" loading="lazy" decoding="async">
+<img src="../assets/images/image-079-64a18d04.webp" alt="参与者完成任务获得奖励">
 <figcaption>03 / 现金兑现</figcaption>
 </figure>
 <figure>
-<img src="../assets/images/image-080-02e20d29.webp" alt="参与者展示获得的现金奖励" loading="lazy" decoding="async">
+<img src="../assets/images/image-080-02e20d29.webp" alt="参与者展示获得的现金奖励">
 <figcaption>04 / 结果反馈</figcaption>
 </figure>
 </div>
@@ -1157,10 +1148,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 </div>
 <div class="mystery-stage">
 <div class="mystery-images">
-<img class="active" src="../assets/images/image-081-8a6a9308.png" alt="向用户告知神秘寻宝任务" loading="lazy" decoding="async">
-<img src="../assets/images/image-082-a8e7a7cf.webp" alt="参与者依据线索寻找宝物" loading="lazy" decoding="async">
-<img src="../assets/images/image-083-cc1cb065.webp" alt="参与者在现场探索宝物" loading="lazy" decoding="async">
-<img src="../assets/images/image-084-80f4e49b.webp" alt="参与者找到宝物并展示奖励" loading="lazy" decoding="async">
+<img class="active" src="../assets/images/image-081-8a6a9308.png" alt="向用户告知神秘寻宝任务">
+<img src="../assets/images/image-082-a8e7a7cf.webp" alt="参与者依据线索寻找宝物">
+<img src="../assets/images/image-083-cc1cb065.webp" alt="参与者在现场探索宝物">
+<img src="../assets/images/image-084-80f4e49b.webp" alt="参与者找到宝物并展示奖励">
 </div>
 <div class="mystery-readout">
 <small id="mysteryStep">STEP 01 / RULE</small>
@@ -1200,14 +1191,14 @@ document.addEventListener('DOMContentLoaded',()=>{
 <button class="engine-input micro active" type="button" data-engine-input="micro">
 <span class="engine-label"><i></i>微运动</span>
 <span class="engine-icons">
-<img data-asset="blue-person" src="../assets/images/image-085-fbdf2eac.png" alt="站立" loading="lazy" decoding="async"><img data-asset="yellow-person" src="../assets/images/image-086-e7e230cd.png" alt="伸展" loading="lazy" decoding="async"><img data-asset="water" src="../assets/images/image-087-4485dd27.png" alt="饮水" loading="lazy" decoding="async">
+<img data-asset="blue-person" src="../assets/images/image-085-fbdf2eac.png" alt="站立"><img data-asset="yellow-person" src="../assets/images/image-086-e7e230cd.png" alt="伸展"><img data-asset="water" src="../assets/images/image-087-4485dd27.png" alt="饮水">
 </span>
 <small>站立 · 伸展 · 饮水</small>
 </button>
 <button class="engine-input ar" type="button" data-engine-input="ar">
 <span class="engine-label"><i></i>AR 寻宝</span>
 <span class="engine-icons">
-<span class="ar-mark"><i></i></span><img data-asset="box" src="../assets/images/image-088-5578b86a.png" alt="神秘宝箱" loading="lazy" decoding="async"><span class="cc-mark">CC</span>
+<span class="ar-mark"><i></i></span><img data-asset="box" src="../assets/images/image-088-5578b86a.png" alt="神秘宝箱"><span class="cc-mark">CC</span>
 </span>
 <small>空间线索 · 随机奖励</small>
 </button>
@@ -1215,7 +1206,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <button class="engine-account" type="button" aria-label="健康值账户">
 <span>SHARED ACCOUNT</span><b>健康值账户</b><strong id="engineValue">1,150</strong><small>健康值</small><i></i>
 </button>
-<div class="engine-phone-wrap"><img class="engine-phone" id="enginePhone" alt="Easy Health & Earn 首页界面" loading="lazy" decoding="async"><span class="phone-sync">SYNCED</span></div>
+<div class="engine-phone-wrap"><img class="engine-phone" id="enginePhone" alt="Easy Health & Earn 首页界面"><span class="phone-sync">SYNCED</span></div>
 <div class="engine-rewards">
 <span class="engine-label"><i></i>CRYPTO REWARD</span>
 <button type="button" data-reward="coin"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="10"/><path d="M20 11.5a6 6 0 1 0 0 9M18 13.5a3.4 3.4 0 1 0 0 5"/></svg><b>CC 加密货币</b></button>
@@ -1232,14 +1223,14 @@ document.addEventListener('DOMContentLoaded',()=>{
 </div>
 <div class="ui-showcase-stage">
 <div class="ui-stage-copy"><span id="uiStageKicker">01 / CORE HEALTH ENGINE</span><h3 id="uiStageTitle">完整界面，呈现行为如何变成健康值。</h3><p id="uiStageText">首页将任务、累计进度和 CC 余额置于同一视野。</p></div>
-<div class="ui-phone primary"><img id="uiStagePrimary" data-asset="home" src="../assets/images/image-089-fe201357.png" alt="核心健康账户完整界面" loading="lazy" decoding="async"></div>
-<div class="ui-phone secondary"><img id="uiStageSecondary" data-asset="task" src="../assets/images/image-090-4d3c97ab.png" alt="任务完整界面" loading="lazy" decoding="async"></div>
+<div class="ui-phone primary"><img id="uiStagePrimary" data-asset="home" src="../assets/images/image-089-fe201357.png" alt="核心健康账户完整界面"></div>
+<div class="ui-phone secondary"><img id="uiStageSecondary" data-asset="task" src="../assets/images/image-090-4d3c97ab.png" alt="任务完整界面"></div>
 <div class="ui-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
 <div class="ui-live"><i></i><span>LIVE UI</span></div>
 </div>
 </div>
 <div class="loop-showcase" data-state="0">
-<div class="asset-bank" aria-hidden="true"><img data-asset="camera" src="../assets/images/image-091-dddd0a4a.png" loading="lazy" decoding="async"><img data-asset="inventory" src="../assets/images/image-092-7b08986f.png" loading="lazy" decoding="async"></div>
+<div class="asset-bank" aria-hidden="true"><img data-asset="camera" src="../assets/images/image-091-dddd0a4a.png"><img data-asset="inventory" src="../assets/images/image-092-7b08986f.png"></div>
 <div class="loop-copy">
 <span id="loopKicker">01 / MICRO ACTION</span>
 <h3 id="loopTitle">在工作间隙，完成低门槛微运动。</h3>
@@ -1252,10 +1243,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 </div>
 <div class="loop-device-stage">
 <div class="loop-halo" aria-hidden="true"></div>
-<img class="loop-phone active" data-loop-image="0" src="../assets/images/image-093-c18af92f.webp" alt="碎片化健康任务界面" loading="lazy" decoding="async">
-<img class="loop-phone" data-loop-image="1" src="../assets/images/image-094-032bc957.webp" alt="AR 寻宝界面" loading="lazy" decoding="async">
-<img class="loop-phone" data-loop-image="2" src="../assets/images/image-095-472629eb.webp" alt="健康权益兑换界面" loading="lazy" decoding="async">
-<img class="loop-symbol" id="loopSymbol" src="../assets/images/image-096-c6df7c5d.webp" alt="当前阶段图标" loading="lazy" decoding="async">
+<img class="loop-phone active" data-loop-image="0" src="../assets/images/image-093-c18af92f.webp" alt="碎片化健康任务界面">
+<img class="loop-phone" data-loop-image="1" src="../assets/images/image-094-032bc957.webp" alt="AR 寻宝界面">
+<img class="loop-phone" data-loop-image="2" src="../assets/images/image-095-472629eb.webp" alt="健康权益兑换界面">
+<img class="loop-symbol" id="loopSymbol" src="../assets/images/image-096-c6df7c5d.webp" alt="当前阶段图标">
 <div class="loop-feedback" id="loopFeedback"><small>HEALTH POINTS</small><strong>+100</strong></div>
 </div>
 </div>
@@ -1296,7 +1287,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 </div>
 <div class="flow-stage">
 <div class="flow-visual">
-<img id="flowImage" src="../assets/images/image-097-eb9f47f2.png" alt="关键产品体验" loading="lazy" decoding="async">
+<img id="flowImage" src="../assets/images/image-097-eb9f47f2.png" alt="关键产品体验">
 <div class="asset-placeholder" id="assetPlaceholder">
 <div>
 <div class="asset-note">ASSET NEEDED</div>
@@ -1341,7 +1332,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 </div>
 <div class="system-grid legacy-system-grid">
 <div class="system-card">
-<img src="../assets/images/image-098-982885ae.png" alt="B2B2C 服务系统与 Hook Model" loading="lazy" decoding="async">
+<img src="../assets/images/image-098-982885ae.png" alt="B2B2C 服务系统与 Hook Model">
 </div>
 <div class="stakeholders">
 <article class="stakeholder">
@@ -1389,9 +1380,9 @@ document.addEventListener('DOMContentLoaded',()=>{
 <g class="energy-dots"><circle data-day="0" cx="150" cy="119" r="8"/><circle data-day="1" cx="430" cy="208" r="8"/><circle data-day="2" cx="720" cy="165" r="8"/><circle data-day="3" cx="1015" cy="151" r="8"/></g>
 </svg>
 <div class="journey-ui ui-commute active" data-journey-ui="0"><div class="commute-mini"><small>CHANGE COMMUTE</small><b>骑行</b><strong>10 <i>min</i></strong><span>+80 HEALTH VALUE</span></div></div>
-<div class="journey-ui ui-micro" data-journey-ui="1"><img data-asset="task" alt="碎片微运动完整界面" loading="lazy" decoding="async"></div>
-<div class="journey-ui ui-ar" data-journey-ui="2"><img data-asset="map" src="../assets/images/image-099-246e62f8.png" alt="AR 寻宝完整界面" loading="lazy" decoding="async"></div>
-<div class="journey-ui ui-crypto" data-journey-ui="3"><img data-asset="store" src="../assets/images/image-100-f89b6a73.png" alt="CC 加密奖励完整界面" loading="lazy" decoding="async"></div>
+<div class="journey-ui ui-micro" data-journey-ui="1"><img data-asset="task" alt="碎片微运动完整界面"></div>
+<div class="journey-ui ui-ar" data-journey-ui="2"><img data-asset="map" src="../assets/images/image-099-246e62f8.png" alt="AR 寻宝完整界面"></div>
+<div class="journey-ui ui-crypto" data-journey-ui="3"><img data-asset="store" src="../assets/images/image-100-f89b6a73.png" alt="CC 加密奖励完整界面"></div>
 <div class="journey-axis"><span>09:00<small>主动通勤</small></span><span>12:00<small>碎片微运动</small></span><span>15:00<small>AR 寻宝</small></span><span>18:00<small>CC 奖励</small></span></div>
 </div>
 <aside class="journey-panel" aria-live="polite">
@@ -1406,7 +1397,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 </aside>
 </div>
 <div class="journey legacy-journey">
-<img src="../assets/images/image-101-7d6f8229.png" alt="上班族一天 Before After 轨迹" loading="lazy" decoding="async">
+<img src="../assets/images/image-101-7d6f8229.png" alt="上班族一天 Before After 轨迹">
 <div class="journey-scrub">
 <span class="journey-label" id="journeyLabel">09:00 · 开启早上活动</span>
 <input id="journeyRange" type="range" min="0" max="100" value="0" aria-label="查看一天轨迹">
@@ -1416,7 +1407,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 </section>
 <section id="work-explorer" aria-labelledby="work-explorer-title"><div class="work-heading"><h2 id="work-explorer-title">接下来，看看这些项目</h2><button type="button" class="work-toggle" aria-expanded="false" aria-controls="work-explorer-grid" disabled><span>CHECK OUT MY OTHER WORK</span><b aria-hidden="true">＋</b></button></div><p class="work-note" aria-live="polite">正在准备项目…</p><nav class="work-filters" aria-label="按设计能力筛选项目" hidden><button type="button" data-group="all" aria-pressed="true">全部项目</button><button type="button" data-group="systems" aria-pressed="false">AI 工作流与系统</button><button type="button" data-group="interaction" aria-pressed="false">AI 交互与 UI</button><button type="button" data-group="endtoend" aria-pressed="false">全链路设计</button></nav><div class="work-grid" id="work-explorer-grid"></div></section>
 </main>
-<footer class="footer"><div class="footer-inner"><h2>Apple Chen</h2><div class="contact"><div class="contact-line"><span class="contact-item"><img class="email-icon" src="../assets/images/image-018-06c08676.png" alt="邮箱" loading="lazy" decoding="async">c1598786871@163.com</span><span class="contact-item"><img class="phone-icon" src="../assets/images/image-019-9ac6e84b.png" alt="电话" loading="lazy" decoding="async">18986195215</span></div><div class="contact-action"><button class="contact-button" data-copy-email="c1598786871@163.com">START_A_CONVERSATION ↗</button><div class="toast" role="status" aria-live="polite"><b>✓</b><span>c1598786871@163.com 邮箱已复制</span></div></div></div></div></footer>
+<footer class="footer"><div class="footer-inner"><h2>Apple Chen</h2><div class="contact"><div class="contact-line"><span class="contact-item"><img class="email-icon" src="../assets/images/image-018-06c08676.png" alt="邮箱">c1598786871@163.com</span><span class="contact-item"><img class="phone-icon" src="../assets/images/image-019-9ac6e84b.png" alt="电话">18986195215</span></div><div class="contact-action"><button class="contact-button" data-copy-email="c1598786871@163.com">START_A_CONVERSATION ↗</button><div class="toast" role="status" aria-live="polite"><b>✓</b><span>c1598786871@163.com 邮箱已复制</span></div></div></div></div></footer>
 <script>
 const q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)],pointer=q('#pointer'),view=q('#view');addEventListener('pointermove',e=>{pointer.style.left=e.clientX+'px';pointer.style.top=e.clientY+'px';view.style.left=e.clientX+'px';view.style.top=e.clientY+'px';document.documentElement.style.setProperty('--mx',e.clientX/innerWidth*100+'%');document.documentElement.style.setProperty('--my',e.clientY/innerHeight*100+'%')});qa('button,.related-card').forEach(el=>{el.addEventListener('mouseenter',()=>pointer.style.transform='translate(-4px,-4px) scale(.86) rotate(-5deg)');el.addEventListener('mouseleave',()=>pointer.style.transform='translate(-4px,-4px)')});qa('.related-card').forEach(card=>{card.addEventListener('mouseenter',()=>view.classList.add('on'));card.addEventListener('mouseleave',()=>view.classList.remove('on'))});addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;q('#progress').style.transform=`scaleX(${max?scrollY/max:0})`},{passive:true});
 const animateNumber=(el,to,duration=900)=>{const start=performance.now();const tick=now=>{const p=Math.min(1,(now-start)/duration),eased=1-Math.pow(1-p,3);el.textContent=Math.round(to*eased).toLocaleString();if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick)};if('IntersectionObserver'in window){const countObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;entry.target.querySelectorAll('[data-count]').forEach(el=>animateNumber(el,+el.dataset.count));countObserver.unobserve(entry.target)}),{threshold:.35});qa('section').forEach(section=>{if(section.querySelector('[data-count]'))countObserver.observe(section)})}
@@ -1558,7 +1549,7 @@ document.addEventListener('click',async e=>{const b=e.target.closest('[data-copy
   const visible=expanded?items.filter(x=>category==='all'||x.group===category):recommended.map(id=>items.find(x=>x.route===id)).filter(Boolean);
   for(const [i,item] of visible.entries()){
    const current=item.route==="#project-health",card=document.createElement(current?'article':'a');card.className='work-card';if(!current){card.href=item.route;card.dataset.route=item.route}else card.setAttribute('aria-label',item.title+'，正在浏览');
-   const cover=document.createElement('div');cover.className='work-cover';const iframe=document.createElement('iframe');iframe.title=item.title+'封面';iframe.tabIndex=-1;iframe.setAttribute('aria-hidden','true');iframe.setAttribute('sandbox','');iframe.loading='lazy';iframe.dataset.w=item.width;iframe.dataset.h=item.height;iframe.style.width=item.width+'px';iframe.style.height=item.height+'px';iframe.srcdoc=item.cover;cover.append(iframe);
+   const cover=document.createElement('div');cover.className='work-cover';const iframe=document.createElement('iframe');iframe.title=item.title+'封面';iframe.tabIndex=-1;iframe.setAttribute('aria-hidden','true');iframe.setAttribute('sandbox','');iframe.loading='eager';iframe.dataset.w=item.width;iframe.dataset.h=item.height;iframe.style.width=item.width+'px';iframe.style.height=item.height+'px';iframe.srcdoc=item.cover;cover.append(iframe);
    const content=document.createElement('div');content.className='work-copy';const reason=document.createElement('p');reason.className='work-reason';reason.textContent=current?'正在浏览':expanded?item.label:reasons[item.route];const title=document.createElement('h3');title.textContent=item.title;const sub=document.createElement('p');sub.className='work-sub';sub.textContent=item.subtitle;const arrow=document.createElement('span');arrow.className='work-arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent=current?'●':'↗';content.append(reason,title,sub,arrow);card.append(cover,content);grid.append(card);resize.observe(cover);
    if(!reduced.matches&&card.animate)card.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'none'}],{duration:300,delay:Math.min(i*35,160),fill:'backwards'});
   }
