@@ -1,0 +1,16 @@
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:300;font-display:swap;src:url('./local-01.ttf') format('truetype');}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('./local-02.ttf') format('truetype');}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:500;font-display:swap;src:url('./local-03.ttf') format('truetype');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300;font-display:swap;src:url('./local-04.ttf') format('truetype');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('./local-05.ttf') format('truetype');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('./local-06.ttf') format('truetype');}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('./local-07.ttf') format('truetype');}
+@font-face{font-family:'DotGothic16';font-style:normal;font-weight:400;font-display:swap;src:url('./local-08.ttf') format('truetype');}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:300;font-display:swap;src:url('./local-09.ttf') format('truetype');}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:400;font-display:swap;src:url('./local-10.ttf') format('truetype');}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:500;font-display:swap;src:url('./local-11.ttf') format('truetype');}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:600;font-display:swap;src:url('./local-12.ttf') format('truetype');}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:700;font-display:swap;src:url('./local-13.ttf') format('truetype');}
+@font-face{font-family:'Noto Serif SC';font-style:normal;font-weight:400;font-display:swap;src:url('./local-14.ttf') format('truetype');}
+@font-face{font-family:'Noto Serif SC';font-style:normal;font-weight:500;font-display:swap;src:url('./local-15.ttf') format('truetype');}
+@font-face{font-family:'Noto Serif SC';font-style:normal;font-weight:600;font-display:swap;src:url('./local-16.ttf') format('truetype');}
