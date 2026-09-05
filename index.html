@@ -258,6 +258,7 @@ body.workflow-open #cursor,body.workflow-open #viewCursor{visibility:hidden}
 #cap-physical .portfolio02-card:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
 body.portfolio-viewing #cursor{visibility:hidden!important}
 #viewCursor{transition:opacity .16s!important;pointer-events:none!important}
+@media(pointer:fine){html,body,body *{cursor:none!important}}
 </style><style id="refined-capabilities">
 #capabilities .capJump{gap:0!important;overflow:visible;background:rgba(255,255,255,.24);border-radius:16px;padding:10px 0}
 #capabilities .capJump>a{min-height:280px!important;height:auto!important;padding:26px 28px 20px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;display:flex!important;flex-direction:column;transform:none!important}
@@ -370,7 +371,7 @@ const identityRows=[...document.querySelectorAll('.identityRow')],identityPrevie
 </div>
 
 <script id="integrated-camera-router">
-(()=>{const root=document.getElementById('appleCameraProject'),card=document.querySelector('#cap-ai .project'),progress=document.getElementById('scrollProgress'),view=document.getElementById('viewCursor'),homeImage=card?.querySelector('.aiCam img');let homeY=0;
+(()=>{const root=document.getElementById('appleCameraProject'),card=document.querySelector('#cap-ai .project'),progress=document.getElementById('scrollProgress'),view=document.getElementById('viewCursor'),homeImage=card?.querySelector('.aiCam img');let homeY=0;if(!root||!card)return;
 if(homeImage)root.style.setProperty('--ac-gimbal-image',`url("${homeImage.src}")`);
 function openCamera(save=true){if(save)homeY=window.scrollY;document.body.classList.add('camera-open');view?.classList.remove('on');progress.style.transform='scaleX(0)';document.title='主动摄影系统 — Apple Chen';window.scrollTo({top:0,behavior:'instant'});if(location.hash!=='#ai-camera')history.pushState({camera:true},'', '#ai-camera')}
 function closeCamera(){document.body.classList.remove('camera-open');view?.classList.remove('on');document.title='Apple Chen — AI UX Designer';history.replaceState({},'', '#projects');requestAnimationFrame(()=>window.scrollTo({top:homeY||document.getElementById('cap-ai').offsetTop,behavior:'instant'}))}
@@ -397,13 +398,15 @@ const modes={auto:{path:'M80 320 C220 60 350 380 710 100',label:'AUTO FOLLOW / 0
  }));
  const frame=document.querySelector('#workflow-page');
  const routes={'#project-health':['projects/easy-health-earn.html','职场健康激励'],'#project-lovmily':['projects/lovmily.html','LOVMILY'],'#project-auralink':['projects/auralink.html','AURALINK'],'#design-workflow':['projects/design-workflow.html','设计系统 AI Workflow'],'#project-camera':['projects/active-camera.html','主动摄影系统'],'#project-agent':['projects/task-agent.html','任务机器人'],'#project-audio':['projects/step-audio-live.html','Step-Audio Live'],'#project-ui':['projects/zhuanzhuan-search.html','转转搜索结果页']};
+ const returnAnchors={'#design-workflow':'return-design-workflow','#project-camera':'return-project-camera','#project-agent':'return-project-agent','#project-audio':'return-project-audio','#project-ui':'return-project-ui','#project-health':'return-project-health','#project-lovmily':'return-project-lovmily','#project-auralink':'return-project-auralink'};
+ document.querySelectorAll('.workflow-feature,.portfolio02-card').forEach(link=>{const id=returnAnchors[link.hash];if(id)link.id=id});
  let previousFocus=null,current='',opened=false,serial=0;
  const setPage=()=>{const route=routes[location.hash],open=!!route;
   if(open&&!opened)previousFocus=document.activeElement;
   document.body.classList.toggle('workflow-open',open);
   if(open!==opened){for(const el of document.body.children){if(!['SCRIPT','STYLE'].includes(el.tagName)&&el!==frame){if(open){el.dataset.previousInert=String(el.inert);el.inert=true}else if(el.dataset.previousInert!==undefined){el.inert=el.dataset.previousInert==='true';delete el.dataset.previousInert}}}opened=open}
-  if(open){frame.title=route[1];if(current!==location.hash){current=location.hash;const token=++serial;frame.removeAttribute('srcdoc');frame.src=route[0];frame.onload=()=>{if(token===serial&&opened)frame.focus()}}else frame.focus()}
-  else{++serial;previousFocus?.focus?.({preventScroll:true})}
+  if(open){frame.title=route[1];if(current!==location.hash){current=location.hash;const token=++serial;frame.removeAttribute('srcdoc');frame.src=new URL(route[0],location.href).href;frame.onload=()=>{if(token===serial&&opened)frame.focus()}}else frame.focus()}
+  else{++serial;current='';previousFocus?.focus?.({preventScroll:true})}
  };
  document.querySelectorAll('.workflow-feature,.portfolio02-card').forEach(link=>link.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();history.pushState({portfolioProject:true},'',link.hash);document.getElementById('viewCursor')?.classList.remove('on');document.body.classList.remove('portfolio-viewing');setPage()}));
 
@@ -428,13 +431,13 @@ const modes={auto:{path:'M80 320 C220 60 350 380 710 100',label:'AUTO FOLLOW / 0
    history.pushState({portfolioProject:true},'',e.data.route);setPage();
   }
  });
- const close=()=>{if(history.state?.portfolioProject||history.state?.workflow)history.back();else{history.replaceState(null,'','#cap-physical');setPage()}};
+ const close=()=>{const anchor=returnAnchors[current]||'capabilities';history.replaceState(null,'','#'+anchor);setPage();requestAnimationFrame(()=>document.getElementById(anchor)?.scrollIntoView({block:'center',behavior:'instant'}))};
  addEventListener('message',e=>{if(e.source===frame.contentWindow&&e.data==='portfolio:back')close()});
  addEventListener('popstate',setPage);addEventListener('hashchange',setPage);addEventListener('keydown',e=>{if(e.key==='Escape'&&opened)close()});setPage();
  const view=document.getElementById('viewCursor'),fine=matchMedia('(hover:hover) and (pointer:fine)');
  const hide=()=>{view.classList.remove('on');document.body.classList.remove('portfolio-viewing')};
  document.addEventListener('pointermove',e=>{if(opened||!fine.matches){hide();return}const on=!!e.target.closest('.portfolio02-card,.workflow-feature,.projectLink');view.style.left=e.clientX+'px';view.style.top=e.clientY+'px';view.classList.toggle('on',on);document.body.classList.toggle('portfolio-viewing',on)},{passive:true});
- document.documentElement.addEventListener('pointerleave',hide);addEventListener('blur',hide);
+ document.documentElement.addEventListener('pointerleave',hide);addEventListener('blur',hide);addEventListener('pageshow',()=>{hide();if(!routes[location.hash]){document.body.classList.remove('workflow-open','camera-open');current='';opened=false}});
 })();
 </script><script>(()=>{const observer=new ResizeObserver(entries=>{for(const {target,contentRect:r} of entries)target.style.setProperty('--cover-scale',Math.min(r.width/900,r.height/650).toString())});document.querySelectorAll('.portfolio02-cover').forEach(el=>observer.observe(el))})();</script><style id="portfolio-universal-loader-style">
 #portfolioUniversalLoader{position:fixed;inset:0;z-index:2147483646;display:grid;place-items:center;padding:30px;background:#f1ede3;color:#15161a;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,visibility 0s linear .22s}#portfolioUniversalLoader.is-active{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .18s ease}#portfolioUniversalLoader:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(72,69,62,.13) .7px,transparent .8px),radial-gradient(rgba(72,69,62,.055) .6px,transparent .7px);background-position:0 0,12px 12px;background-size:24px 24px}#portfolioUniversalLoader:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(38,72,232,.07),transparent 26%)}.pul-meta,.pul-year,.pul-bottom,.pul-label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}.pul-meta{position:absolute;z-index:1;top:31px;left:40px;color:#2648e8;font-size:10px}.pul-year{position:absolute;z-index:1;top:31px;right:40px;color:#92918a;font-size:10px}.pul-bottom{position:absolute;z-index:1;bottom:27px;left:50%;transform:translateX(-50%);color:#94938d;font-size:9px;white-space:nowrap}.pul-content{position:relative;z-index:1;width:min(420px,76vw);text-align:center}.pul-mark{position:relative;width:64px;height:64px;margin:0 auto 30px}.pul-ring{position:absolute;inset:0;border:1px solid rgba(38,72,232,.16);border-radius:50%}.pul-arc{position:absolute;inset:0;border:2px solid transparent;border-top-color:#2648e8;border-right-color:#2648e8;border-radius:50%;animation:pul-spin 1.15s cubic-bezier(.55,.15,.45,.85) infinite}.pul-core{position:absolute;inset:25px;border-radius:50%;background:#2648e8;animation:pul-pulse 1.15s ease-in-out infinite}.pul-label{margin:0 0 15px;color:#2648e8;font-size:10px}.pul-title{margin:0;font:400 clamp(22px,3vw,31px)/1.35 Georgia,"Noto Serif SC",serif;letter-spacing:-.025em}.pul-title span{color:#2648e8}@keyframes pul-spin{to{transform:rotate(360deg)}}@keyframes pul-pulse{50%{transform:scale(.72);opacity:.58}}@media(max-width:600px){.pul-meta{top:23px;left:21px}.pul-year{top:23px;right:21px}.pul-bottom{bottom:19px}}
