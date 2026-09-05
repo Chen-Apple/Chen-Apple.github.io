@@ -3622,7 +3622,10 @@ body.work-viewing #pointer{visibility:hidden!important}
 @media(prefers-reduced-motion:reduce){#work-explorer *,#viewPointer.work-on{transition:none!important;animation:none!important}}
 
 #work-explorer{box-sizing:border-box}#work-explorer .work-card{display:block;height:auto;text-align:left}#viewPointer.work-on{position:fixed!important;display:block!important;z-index:10002!important;pointer-events:none!important}#work-explorer .work-copy{display:block}#work-explorer .work-card:before,#work-explorer .work-card:after{display:none}</style><link rel="stylesheet" href="../assets/fonts/fonts-local.css"><script>document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>parent.postMessage({type:'portfolio:page-ready'},'*'))));</script><style id="static-other-work-covers">
-#work-explorer .work-cover>img{display:block;width:100%;height:100%;object-fit:cover}
+#work-explorer .work-cover{display:grid;place-items:center;background:#f5f1e8}
+#work-explorer .work-cover>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+#work-explorer .work-cover>img[src*="task-agent"]{width:92%;height:92%;object-fit:contain;border-radius:8px}
+#work-explorer .work-cover>img[src*="step-audio-live"]{width:86%;height:86%;object-fit:contain;border-radius:8px}
 </style></head>
 <body data-project="lovmily">
   <div class="paper-dots" aria-hidden="true"></div>
@@ -3654,13 +3657,13 @@ body.work-viewing #pointer{visibility:hidden!important}
         <div class="mvp-layout">
           <div class="mvp-evidence" data-reveal>
             <figure class="mvp-main-photo">
-              <img id="lmImage11" src="../assets/images/image-110-c125e933.jpg" alt="LOVMILY MVP 现场测试照片" loading="lazy">
+              <img id="lmImage11" src="../assets/images/image-110-c125e933.webp" alt="LOVMILY MVP 现场测试照片" loading="lazy">
               <button class="evidence-point point-body active" type="button" data-evidence="body" aria-pressed="true"><span>1</span><i>抱持感</i></button>
               <button class="evidence-point point-feedback" type="button" data-evidence="feedback" aria-pressed="false"><span>2</span><i>反馈</i></button>
               <button class="evidence-point point-guidance" type="button" data-evidence="guidance" aria-pressed="false"><span>3</span><i>引导</i></button>
               <figcaption>FIELD TEST / CLICK AN EVIDENCE POINT</figcaption>
             </figure>
-            <figure class="mvp-secondary-photo"><button class="image-zoom" type="button" data-lightbox="inline:lmImage12" data-alt="查看完整制作与测试证据"><img id="lmImage12" src="../assets/images/image-111-bbc317b1.jpg" alt="LOVMILY 家长端 MVP 现场观察" loading="lazy"></button><figcaption>同一位前期访谈用户参与现场验证</figcaption></figure>
+            <figure class="mvp-secondary-photo"><button class="image-zoom" type="button" data-lightbox="inline:lmImage12" data-alt="查看完整制作与测试证据"><img id="lmImage12" src="../assets/images/image-111-bbc317b1.webp" alt="LOVMILY 家长端 MVP 现场观察" loading="lazy"></button><figcaption>同一位前期访谈用户参与现场验证</figcaption></figure>
           </div>
 
           <div class="mvp-insight" data-reveal>
